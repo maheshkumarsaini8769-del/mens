@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #FAF8F5;
+  --bg-card: #FFFFFF;
+  --text-primary: #1C1917;
+  --text-muted: #78716C;
+  --gold-accent: #B88E3E;
+  --gold-border: rgba(184, 142, 62, 0.25);
+  --border-light: #E7E2D8;
+}
+
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Lenis smooth scrolling recommendations */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Elegant Light Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4EFE6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D2C5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B88E3E;
+}
+
+/* Typography Utility Classes */
+.font-serif-luxury {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+/* Glassmorphism for Light Mode */
+.glass-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(231, 226, 216, 0.8);
+}
+
+.glass-gold {
+  background: rgba(250, 248, 245, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(184, 142, 62, 0.22);
+}
+
+/* Delicate Gold Hairline border */
+.border-gold-hairline {
+  border-color: rgba(184, 142, 62, 0.28);
+}
+
+/* Subtle Shimmer for luxury badges */
+@keyframes gold-shine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #8C6A24 0%, #B88E3E 50%, #735316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
